@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from 'react-router-dom';
+import { createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createBrowserHistory } from 'history';
+import { StylesProvider, createGenerateClassName } from '@material-ui/styles';
+import Layout from './containers/LayoutContainer';
+import routes from './config/routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const theme = createMuiTheme({
+  typography: {
+    // Use the system font.
+    fontFamily:
+      '-apple-system,system-ui,BlinkMacSystemFont,'
+      + '"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+  },
+});
+
+const history = createBrowserHistory();
+
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'c',
+});
+
+const App = () => (
+  <>
+    <CssBaseline />
+    <StylesProvider generateClassName={generateClassName}>
+      <Router history={history} theme={theme}>
+        <Layout>
+          { routes }
+        </Layout>
+      </Router>
+    </StylesProvider>
+  </>
+);
 
 export default App;

@@ -4,9 +4,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import RealisationCard from './RealisationCard';
 
 const useStyles = makeStyles({
-  container: {
+  wrapper: {
     display: 'flex',
-    flexDirection: 'column',
+    flexWrap: 'wrap',
+    maxWidth: '750px',
+    margin: 'auto',
+  },
+  '@media (max-width: 660px)': {
+    wrapper: {
+      maxWidth: '300px',
+    },
   },
 });
 
@@ -25,22 +32,23 @@ const Realisation = () => {
   }, [data]);
   const classes = useStyles();
   return (
-    <>
+    <div className={classes.wrapper}>
       {data.reverse().map((value) => (
-        <div key={value.id} className={classes.container}>
-          <RealisationCard
-            id={value.id}
-            project={value.project_name}
-            title={value.title}
-            date={value.project_date}
-            description={value.description}
-            competences={value.competences}
-            link={value.project_url}
-            img={value.images}
-          />
-        </div>
+        // <div key={value.id} className={classes.container}>
+        <RealisationCard
+          key={value.id}
+          project={value.project_name}
+          title={value.title}
+          date={value.project_date}
+          description={value.description}
+          competences={value.competences}
+          link={value.project_url}
+          img={value.images}
+          odd={value.id % 2 === 0}
+        />
+        // </div>
       ))}
-    </>
+    </div>
   );
 };
 

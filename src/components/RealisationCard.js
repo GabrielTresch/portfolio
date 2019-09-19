@@ -5,15 +5,15 @@ import PortfolioImg from '../assets/img/project_4.jpg';
 
 const useStyles = makeStyles({
   container: {
-    width: '320px',
-    margin: 'auto',
-    background: 'white',
-    boxShadow: '0 2px 4px rgba(0,0,0,.5)',
+    width: '300px',
+    maxHeight: '363px',
+    margin: '100px auto 0 auto',
     textDecoration: 'none',
     color: 'black',
   },
   img: {
-    width: '320px',
+    width: '300px',
+    boxShadow: '0 2px 4px rgba(0,0,0,.5)',
   },
   content: {
     padding: '10px',
@@ -29,17 +29,28 @@ const useStyles = makeStyles({
     background: 'black',
     color: 'white',
     fontSize: '12px',
-    padding: '2px 5px',
+    padding: '3px 5px',
     margin: 'auto 5px',
+  },
+  odd: {
+    transform: 'translateY(50%)',
+  },
+  '@media (max-width: 660px)': {
+    container: {
+      margin: '10px auto',
+    },
+    odd: {
+      transform: 'translateY(0)',
+    },
   },
 });
 
 const RealisationCard = ({
-  id, title, date, description, competences, link,
+  title, date, description, competences, link, odd,
 }) => {
   const classes = useStyles();
   return (
-    <div key={id} className={classes.container}>
+    <div className={`${classes.container} ${odd ? '' : classes.odd}`}>
       <a href={link}>
         <img src={PortfolioImg} alt="portfolio" className={classes.img} />
       </a>
@@ -57,12 +68,12 @@ const RealisationCard = ({
 };
 
 RealisationCard.propTypes = {
-  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   competences: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  odd: PropTypes.string.isRequired,
 };
 
 export default RealisationCard;

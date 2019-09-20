@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   container: {
     width: '300px',
     maxHeight: '363px',
-    margin: '100px auto 0 auto',
+    margin: '20px auto 0 auto',
     textDecoration: 'none',
     color: 'black',
   },
@@ -33,14 +33,15 @@ const useStyles = makeStyles({
     margin: 'auto 5px',
   },
   odd: {
-    transform: 'translateY(50%)',
+    // transform: 'translateY(50%)',
+    marginTop: '200px',
   },
   '@media (max-width: 660px)': {
     container: {
-      margin: '10px auto',
+      margin: '30px auto',
     },
     odd: {
-      transform: 'translateY(0)',
+      marginTop: '0',
     },
   },
 });

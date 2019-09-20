@@ -4,12 +4,11 @@ import Realisation from '../components/Realisation';
 
 const useStyles = makeStyles({
   realisations: {
-    height: '120vh',
+    marginTop: '100px',
   },
   '@media (max-width: 660px)': {
     realisations: {
-      background: 'red',
-      height: 'initial',
+      marginTop: '50px',
     },
   },
 });

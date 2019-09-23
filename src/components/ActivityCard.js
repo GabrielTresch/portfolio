@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
@@ -58,6 +58,7 @@ const useStyles = makeStyles({
     marginTop: '5px',
     transition: '0.4s',
     cursor: 'pointer',
+    outline: 'none',
   },
   switchActive: {
     height: '30px',
@@ -97,6 +98,21 @@ const ActivityCard = ({
   img1, img2, img3, title, description, link,
 }) => {
   const classes = useStyles();
+  const [enabled, setEnabled] = useState(false);
+
+  const toggle = (e) => {
+    console.log(e.target);
+    setEnabled(!enabled);
+  };
+
+  const memoizedHandleClick = useCallback(
+    () => {
+      console.log('Click happened');
+      setEnabled(!enabled);
+    },
+    [enabled], // Tells React to memoize regardless of arguments.
+  );
+
   return (
     <>
       <div className={classes.card}>
@@ -107,9 +123,9 @@ const ActivityCard = ({
             <img className={classes.slide} src={img3} alt="slide3" />
           </div>
           <div className={classes.switchSlide}>
-            <div className={[classes.switch, classes.switchActive].join(' ')} />
-            <div className={classes.switch} />
-            <div className={classes.switch} />
+            <div className={`${classes.switch} ${enabled ? classes.switchActive : ''}`} onClick={memoizedHandleClick} onKeyPress={toggle} role="button" tabIndex="0" label="slider switch" />
+            <div className={`${classes.switch} ${enabled ? classes.switchActive : ''}`} onClick={memoizedHandleClick} onKeyPress={toggle} role="button" tabIndex="0" label="slider switch" />
+            <div className={`${classes.switch} ${enabled ? classes.switchActive : ''}`} onClick={toggle} onKeyPress={toggle} role="button" tabIndex="0" label="slider switch" />
           </div>
         </div>
         <div className={classes.description}>

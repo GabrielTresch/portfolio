@@ -73,6 +73,10 @@ const useStyles = makeStyles({
         transform: 'translateY(0)',
       },
     },
+    span: {
+      fontWeight: 'bold',
+      color: 'black',
+    },
     icon: {
       display: 'none',
     },
@@ -90,31 +94,31 @@ const Navigation = () => {
     <nav className={classes.nav}>
       <NavLink className={classes.firstNavlink} to="/">Gabriel Tresch</NavLink>
       <NavLink className={classes.navlink} exact activeClassName={classes.active} to="/">
-        <HomeIcon className={classes.icon} />
+        <HomeIcon className={classes.icon}><span></span></HomeIcon>
         <div className={classes.animMenu}>
           <span>Accueil</span>
-          <span>Accueil</span>
+          <span className={classes.span}>Accueil</span>
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/a-propos">
         <PersonIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>A propos</span>
-          <span>A propos</span>
+          <span className={classes.span}>A propos</span>
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/realisations">
         <CreateIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Réalisations</span>
-          <span>Réalisations</span>
+          <span className={classes.span}>Réalisations</span>
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/contact">
         <EmailIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Contact</span>
-          <span>Contact</span>
+          <span className={classes.span}>Contact</span>
         </div>
       </NavLink>
     </nav>

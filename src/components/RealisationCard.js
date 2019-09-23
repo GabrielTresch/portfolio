@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import PortfolioImg from '../assets/img/project_4.jpg';
 
 const useStyles = makeStyles({
   container: {
@@ -47,13 +46,13 @@ const useStyles = makeStyles({
 });
 
 const RealisationCard = ({
-  title, date, description, competences, link, odd,
+  title, date, description, competences, link, img, odd,
 }) => {
   const classes = useStyles();
   return (
     <div className={`${classes.container} ${odd ? '' : classes.odd}`}>
       <a href={link}>
-        <img src={PortfolioImg} alt="portfolio" className={classes.img} />
+        <img src={img} alt="portfolio" className={classes.img} />
       </a>
       <div className={classes.content}>
         <h2 className={classes.title}>{title}</h2>
@@ -74,6 +73,7 @@ RealisationCard.propTypes = {
   competences: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
   odd: PropTypes.string.isRequired,
 };
 

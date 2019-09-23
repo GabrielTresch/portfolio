@@ -100,14 +100,12 @@ const ActivityCard = ({
   const classes = useStyles();
   const [enabled, setEnabled] = useState(false);
 
-  const toggle = (e) => {
-    console.log(e.target);
+  const toggle = () => {
     setEnabled(!enabled);
   };
 
   const memoizedHandleClick = useCallback(
     () => {
-      console.log('Click happened');
       setEnabled(!enabled);
     },
     [enabled], // Tells React to memoize regardless of arguments.

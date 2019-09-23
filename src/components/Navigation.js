@@ -94,7 +94,7 @@ const Navigation = () => {
     <nav className={classes.nav}>
       <NavLink className={classes.firstNavlink} to="/">Gabriel Tresch</NavLink>
       <NavLink className={classes.navlink} exact activeClassName={classes.active} to="/">
-        <HomeIcon className={classes.icon}><span></span></HomeIcon>
+        <HomeIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Accueil</span>
           <span className={classes.span}>Accueil</span>

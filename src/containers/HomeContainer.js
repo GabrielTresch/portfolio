@@ -19,6 +19,8 @@ const useStyles = makeStyles({
   },
   h1: {
     margin: '0 auto',
+    fontSize: '3em',
+    fontFamily: 'Anton',
   },
   p: {
     marginTop: '0px',
@@ -43,7 +45,7 @@ const useStyles = makeStyles({
       marginBottom: '0',
     },
     h1: {
-      fontSize: '4.8em',
+      fontSize: '6em',
     },
     p: {
       fontSize: '1.5em',

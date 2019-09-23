@@ -30,7 +30,6 @@ const useStyles = makeStyles({
     textDecoration: 'none',
     color: '#a3a3a3',
     position: 'relative',
-    overflow: 'hidden',
   },
   icon: {
     margin: 'auto',
@@ -38,6 +37,24 @@ const useStyles = makeStyles({
   active: {
     color: 'black',
     fontWeight: 'bold',
+    '& > span:first-child': {
+      transform: 'translate(-50%, 30%)',
+    },
+  },
+  activeMobile: {
+    width: '7.5px',
+    height: '7.5px',
+    background: 'black',
+    borderRadius: '100%',
+    zIndex: '-1',
+    transition: '0.2s',
+    position: 'absolute',
+    top: '100%',
+    left: '50%',
+    transform: 'translate(-50%, 200%)',
+  },
+  animMenu: {
+    display: 'none',
   },
   '@media (min-width: 1200px)': {
     nav: {
@@ -64,6 +81,7 @@ const useStyles = makeStyles({
       fontSize: '16px',
       margin: '0',
       marginRight: '6vw',
+      overflow: 'hidden',
       '&:hover div': {
         transform: 'translateY(-50%)',
       },
@@ -85,6 +103,9 @@ const useStyles = makeStyles({
       flexDirection: 'column',
       transition: '0.4s',
     },
+    activeMobile: {
+      display: 'none',
+    },
   },
 });
 
@@ -94,6 +115,7 @@ const Navigation = () => {
     <nav className={classes.nav}>
       <NavLink className={classes.firstNavlink} to="/">Gabriel Tresch</NavLink>
       <NavLink className={classes.navlink} exact activeClassName={classes.active} to="/">
+        <span className={classes.activeMobile} />
         <HomeIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Accueil</span>
@@ -101,6 +123,7 @@ const Navigation = () => {
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/a-propos">
+        <span className={classes.activeMobile} />
         <PersonIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>A propos</span>
@@ -108,6 +131,7 @@ const Navigation = () => {
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/realisations">
+        <span className={classes.activeMobile} />
         <CreateIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Réalisations</span>
@@ -115,6 +139,7 @@ const Navigation = () => {
         </div>
       </NavLink>
       <NavLink className={classes.navlink} activeClassName={classes.active} to="/contact">
+        <span className={classes.activeMobile} />
         <EmailIcon className={classes.icon} />
         <div className={classes.animMenu}>
           <span>Contact</span>

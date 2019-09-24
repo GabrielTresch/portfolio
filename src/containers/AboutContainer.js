@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Titles from '../config/Titles';
 import PhotoPresentation from '../components/PhotoPresentation';
 import Wave from '../assets/img/wave.svg';
 import ActivityCard from '../components/ActivityCard';
@@ -149,6 +150,7 @@ const AboutContainer = () => {
   const classes = useStyles();
   return (
     <>
+      <Titles title="A propos" />
       <div className={classes.presentation}>
         <PhotoPresentation />
         <div className={classes.description}>

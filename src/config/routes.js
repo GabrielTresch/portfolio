@@ -8,7 +8,7 @@ import Infographie from '../containers/InfographieContainer';
 import Photo from '../containers/PhotoContainer';
 import Travel from '../containers/TravelContainer';
 
-const routes = (
+const Routes = (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/a-propos" component={About} />
@@ -21,4 +21,4 @@ const routes = (
   </Switch>
 );
 
-export default routes;
+export default Routes;

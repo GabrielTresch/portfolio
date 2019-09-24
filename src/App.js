@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { createBrowserHistory } from 'history';
 import { StylesProvider, createGenerateClassName } from '@material-ui/styles';
 import Layout from './containers/LayoutContainer';
-import routes from './config/routes';
+import routes from './config/Routes';
 
 const theme = createMuiTheme({
   typography: {

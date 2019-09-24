@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Titles from '../config/Titles';
 import Photo from '../components/Photo';
 
 const useStyles = makeStyles({
@@ -19,6 +20,7 @@ const PhotoContainer = () => {
   const classes = useStyles();
   return (
     <>
+      <Titles title="Photographie" />
       <h1 className={classes.title}>Mes photos</h1>
       <Photo />
     </>

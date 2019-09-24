@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Titles from '../config/Titles';
 import Realisation from '../components/Realisation';
 
 const useStyles = makeStyles({
@@ -16,9 +17,12 @@ const useStyles = makeStyles({
 const RealisationContainer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.realisations}>
-      <Realisation />
-    </div>
+    <>
+      <Titles title="Réalisations" />
+      <div className={classes.realisations}>
+        <Realisation />
+      </div>
+    </>
   );
 };
 

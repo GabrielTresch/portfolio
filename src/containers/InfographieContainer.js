@@ -1,8 +1,12 @@
 import React from 'react';
+import Titles from '../config/Titles';
 import Infographie from '../components/Infographie';
 
 const InfographieContainer = () => (
-  <Infographie />
+  <>
+    <Titles title="Infographies" />
+    <Infographie />
+  </>
 );
 
 export default InfographieContainer;

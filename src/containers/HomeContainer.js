@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Titles from '../config/Titles';
 import LinkIcons from '../components/LinkIcons';
 import Vignette from '../components/Vignette';
 import iconG from '../assets/img/g.svg';
@@ -94,6 +95,7 @@ const HomeContainer = () => {
 
   return (
     <>
+      <Titles title="Accueil" />
       <div className={classes.header}>
         <div className={classes.title}>
           <h1 className={classes.h1}>GABRIEL TRESCH</h1>

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Titles from '../config/Titles';
 import PhotoPresentation from '../components/PhotoPresentation';
 import Wave from '../assets/img/wave.svg';
-import ActivityCard from '../components/ActivityCard-test';
+import ActivityCard from '../components/ActivityCard';
 import SpaceImg from '../assets/img/infographie_wallpaper.svg';
 import BeeImg from '../assets/img/golden_ratio_bee.svg';
 import SwanImg from '../assets/img/golden_ratio_swan.svg';
@@ -25,6 +25,7 @@ const useStyles = makeStyles({
   },
   description: {
     padding: '20px',
+    color: 'black',
   },
   activities: {
     position: 'relative',
@@ -61,6 +62,7 @@ const useStyles = makeStyles({
   },
   competencesTitle: {
     marginBottom: '30px',
+    color: 'black',
   },
   '@media (min-width: 1200px)': {
     presentation: {
@@ -176,6 +178,7 @@ const AboutContainer = () => {
               title={value.title}
               description={value.description}
               link={value.link}
+              offset={value.id * 300}
             />
           ))}
         </div>

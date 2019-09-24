@@ -19,6 +19,7 @@ const useStyles = makeStyles({
     position: 'relative',
     paddingLeft: '10px',
     marginBottom: '25px',
+    color: 'black',
   },
   underline: {
     width: '45px',

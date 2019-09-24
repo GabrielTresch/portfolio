@@ -1,0 +1,26 @@
+.presentation-mode{
+  height:100%;
+  .slider-wrapper{
+    height:130px;
+    .slide{
+      div{
+        height:130px;
+        position: relative;
+      }
+    }
+  }
+  .control-dots{
+   margin: 10px;
+  }
+}
+
+@media (min-width: 1200px){
+  .slider-wrapper{
+    height:200px !important;
+    .slide{
+      div{
+        height:200px !important;
+      }
+    }
+  }
+}

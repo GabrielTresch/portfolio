@@ -22,9 +22,11 @@ const useStyles = makeStyles({
     margin: '0 auto',
     fontSize: '3em',
     fontFamily: 'Anton',
+    color: 'black',
   },
   p: {
     marginTop: '0px',
+    color: 'black',
   },
   svgImg: {
     width: '60%',

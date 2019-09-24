@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     fontSize: '40px',
     fontWeight: 'bold',
     marginBottom: '5px',
+    color: 'black',
   },
   description: {
     color: '#8f8f8f',

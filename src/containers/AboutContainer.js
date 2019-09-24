@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Titles from '../config/Titles';
 import PhotoPresentation from '../components/PhotoPresentation';
 import Wave from '../assets/img/wave.svg';
-import ActivityCard from '../components/ActivityCard';
+import ActivityCard from '../components/ActivityCard-test';
 import SpaceImg from '../assets/img/infographie_wallpaper.svg';
 import BeeImg from '../assets/img/golden_ratio_bee.svg';
 import SwanImg from '../assets/img/golden_ratio_swan.svg';

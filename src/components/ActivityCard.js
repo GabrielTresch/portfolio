@@ -71,22 +71,23 @@ const useStyles = makeStyles({
 });
 
 const ActivityCard = ({
-  img1, img2, img3, title, description, link, offset,
+  img1, img2, img3, title, description, link,
 }) => {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.card}>
+      <div className={`${classes.card} uiCard`}>
         <div className={classes.imgContainer}>
           <div className={classes.slider}>
             <Carousel
               showThumbs={false}
               showStatus={false}
-              useKeyboardArrows
+              showArrows={false}
+              showIndicators={false}
               className="presentation-mode"
               autoPlay
-              interval={2000 + offset}
+              interval={2000}
               infiniteLoop
             >
               <div>
@@ -118,7 +119,6 @@ ActivityCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  offset: PropTypes.number.isRequired,
 };
 
 export default ActivityCard;

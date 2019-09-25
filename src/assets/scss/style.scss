@@ -14,6 +14,19 @@
   }
 }
 
+.uiCard{
+  &:nth-child(2){
+    .animated{
+      transition-delay: 0.35s;
+    }
+  }
+  &:nth-child(3){
+    .animated{
+      transition-delay: 0.70s;
+    }
+  }
+}
+
 @media (min-width: 1200px){
   .slider-wrapper{
     height:200px !important;

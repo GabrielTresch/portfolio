@@ -60,7 +60,7 @@ const AboutRealisation = () => {
         <h3>Projets</h3>
         <NavLink className={classes.link} to="/realisations">voir plus</NavLink>
       </div>
-      {data.slice(data.length - 3, data.length).reverse().map((value) => (
+      {data.slice(data.length - 3, data.length).map((value) => (
         <div key={value.id} className={classes.reaCard}>
           <a href={value.project_url}>
             <img src={value.images} alt={value.project_name} className={classes.img} />

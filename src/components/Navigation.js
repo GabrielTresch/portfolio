@@ -82,13 +82,9 @@ const useStyles = makeStyles({
       margin: '0',
       marginRight: '6vw',
       overflow: 'hidden',
+      position: 'relative',
       '&:hover div': {
         transform: 'translateY(-50%)',
-      },
-    },
-    active: {
-      '&:hover div': {
-        transform: 'translateY(0)',
       },
     },
     span: {
@@ -104,7 +100,23 @@ const useStyles = makeStyles({
       transition: '0.4s',
     },
     activeMobile: {
-      display: 'none',
+      width: '0%',
+      height: '2px',
+      borderRadius: '0',
+      top: 'initial',
+      left: 'initial',
+      bottom: '0',
+      transform: 'translate(0, 0)',
+    },
+    active: {
+      '&:hover div': {
+        transform: 'translateY(0)',
+      },
+      '& > span:first-child': {
+        width: '100%',
+        transform: 'translate(50%, 0)',
+        transitionDelay: '0.4s',
+      },
     },
   },
 });

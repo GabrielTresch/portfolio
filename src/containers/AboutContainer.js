@@ -15,6 +15,7 @@ import FlightImg from '../assets/img/travel_avion.jpg';
 import MajorqueImg from '../assets/img/travel_majorque.jpg';
 import CascadeImg from '../assets/img/travel_cascade.jpg';
 import Competences from '../components/Competences';
+import AboutRealisation from '../components/AboutRealisation';
 
 const useStyles = makeStyles({
   presentation: {
@@ -190,6 +191,7 @@ const AboutContainer = () => {
           <Competences key={value.id} title={value.title} competences={value.competences} />
         ))}
       </div>
+      <AboutRealisation />
     </>
   );
 };

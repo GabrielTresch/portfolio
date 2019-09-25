@@ -11,12 +11,12 @@ const useStyles = makeStyles({
     padding: '10px',
   },
   reaCard: {
-    width: 'calc(50% -10px)',
+    width: 'calc(50% - 10px)',
     maxWidth: '280px',
     margin: 'auto auto 20px auto',
   },
   firstReaCard: {
-    marginTop: 'auto',
+    marginTop: '10px',
     width: 'calc(50% - 30px)',
     paddingLeft: '30px',
   },

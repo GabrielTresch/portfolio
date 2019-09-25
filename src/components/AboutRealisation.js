@@ -29,6 +29,7 @@ const useStyles = makeStyles({
   },
   img: {
     width: '100%',
+    boxShadow: '0 2px 4px rgba(0,0,0,.5)',
   },
   '@media (min-width: 1200px)': {
     container: {
@@ -61,7 +62,9 @@ const AboutRealisation = () => {
       </div>
       {data.slice(data.length - 3, data.length).reverse().map((value) => (
         <div key={value.id} className={classes.reaCard}>
-          <img src={value.images} alt={value.project_name} className={classes.img} />
+          <a href={value.project_url}>
+            <img src={value.images} alt={value.project_name} className={classes.img} />
+          </a>
           <h3>{value.title}</h3>
         </div>
       ))}

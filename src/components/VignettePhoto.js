@@ -61,6 +61,10 @@ const VignettePhoto = ({
     <div className={classes.vignette}>
       <div className={classes.background} />
       <div className={classes.content}>
+        {/* <picture>
+          <source type="image/webp" srcSet="/path/to/image.webp" />
+          <img src="/path/to/image.png" alt="" />
+        </picture> */}
         <img src={photo} alt={title} className={[classes.img, classes.slide2].join(' ')} />
         {/* <div className={[classes.img, classes.slide1].join(' ')} /> */}
       </div>

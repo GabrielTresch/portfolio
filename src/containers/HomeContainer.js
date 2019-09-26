@@ -30,6 +30,7 @@ const useStyles = makeStyles({
   },
   svgImg: {
     width: '60%',
+    maxWidth: '350px',
     margin: 'auto',
   },
   HomeContainer: {

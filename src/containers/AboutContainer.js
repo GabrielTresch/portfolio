@@ -108,8 +108,8 @@ const AboutContainer = () => {
       img1: `${SpaceImg}`,
       img2: `${BeeImg}`,
       img3: `${SwanImg}`,
-      title: 'Infographie 2D/3D',
-      description: 'Je fais de l\'infographie 2D sur Adobe illustrator ou sur Blender pour la 3D',
+      title: 'Infographie 2D',
+      description: 'Je fais de l\'infographie 2D sur Adobe illustrator principalement.',
       link: '/infographie',
     },
     {
@@ -127,7 +127,7 @@ const AboutContainer = () => {
       img2: `${MajorqueImg}`,
       img3: `${CascadeImg}`,
       title: 'Voyages',
-      description: 'J\'adore voyager, découvrir de nouveaux endroits, des cultures différentes ainsi que les spécialités locales.',
+      description: 'J\'adore voyager, découvrir de nouveaux endroits ainsi que les spécialités locales.',
       link: '/travel',
     },
   ];

@@ -80,7 +80,7 @@ const HomeContainer = () => {
     {
       id: 1,
       title: 'Mes passions',
-      description: 'Dans cette partie, je vous montrerai différents travaux faits dans les domaines que j\'affectionne. Vous y trouverez certaines de mes infographies 2D et travaux 3D, des photos etc..',
+      description: 'Dans cette partie, je vous montrerai différents travaux faits dans les domaines que j\'affectionne. Vous y trouverez certaines de mes infographies 2D, des photos etc..',
       link: '/a-propos',
       photo: `${Photo}`,
       style: `${classes.homeContent}`,

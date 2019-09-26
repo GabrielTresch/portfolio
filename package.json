@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@google/model-viewer": "^0.6.0",
     "@material-ui/core": "^4.4.2",
     "@material-ui/icons": "^4.4.1",
     "@material-ui/styles": "^4.4.1",
@@ -51,7 +50,6 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-jss": "^8.6.1",
-    "react-model-viewer": "^0.5.1",
     "react-responsive-carousel": "^3.1.50",
     "react-router-dom": "^5.0.1",
     "resolve": "1.12.0",
@@ -60,7 +58,6 @@
     "semver": "6.3.0",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "1.4.1",
-    "three": "^0.108.0",
     "ts-pnp": "1.1.2",
     "url-loader": "2.1.0",
     "webpack": "4.39.1",

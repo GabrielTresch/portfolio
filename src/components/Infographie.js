@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Infographie2D from './Infographie2D';
-import Infographie3D from './Infographie3D';
 
 const useStyles = makeStyles({
   container: {
@@ -36,8 +35,6 @@ const Infographie = () => {
   const classes = useStyles();
   return (
     <>
-      <h1 className={classes.title}>Mes réalisations 3D</h1>
-      <Infographie3D />
       <h1 className={classes.title}>Mes infographies 2D</h1>
       <Infographie2D />
     </>

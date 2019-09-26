@@ -4,8 +4,6 @@ import Titles from '../config/Titles';
 import LinkIcons from '../components/LinkIcons';
 import Vignette from '../components/Vignette';
 import iconG from '../assets/img/g.svg';
-import Photo from '../assets/img/photo.jpg';
-import Code from '../assets/img/code.jpg';
 
 const useStyles = makeStyles({
   header: {
@@ -84,7 +82,8 @@ const HomeContainer = () => {
       title: 'Mes passions',
       description: 'Dans cette partie, je vous montrerai différents travaux faits dans les domaines que j\'affectionne. Vous y trouverez certaines de mes infographies 2D, des photos etc..',
       link: '/a-propos',
-      photo: `${Photo}`,
+      src: 'photo.jpg',
+      srcset: 'photo.webp',
       style: `${classes.homeContent}`,
     },
     {
@@ -92,7 +91,8 @@ const HomeContainer = () => {
       title: 'Mes réalisations',
       description: 'J\'ai eu l\'occasion de réaliser quelques projets lors de mes études. Vous trouverez dans cette partie les projets dont j\'ai dû m\'occuper ainsi que mes projets personnels',
       link: '/realisations',
-      photo: `${Code}`,
+      src: 'code.jpg',
+      srcset: 'code.webp',
       style: `${[classes.homeContent, classes.homeContentLast].join(' ')}`,
     },
   ];
@@ -115,7 +115,8 @@ const HomeContainer = () => {
             title={value.title}
             description={value.description}
             link={value.link}
-            photo={value.photo}
+            src={value.src}
+            srcset={value.srcset}
             style={value.style}
           />
         ))}

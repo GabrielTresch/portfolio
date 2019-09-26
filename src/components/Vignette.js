@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 });
 
 const Vignette = ({
-  title, description, link, photo, style,
+  title, description, link, src, srcset, style,
 }) => {
   const classes = useStyles();
   return (
@@ -35,7 +35,7 @@ const Vignette = ({
           <p>{description}</p>
           <NavLink to={link} className={classes.infoLink}>Voir plus</NavLink>
         </div>
-        <VignettePhoto photo={photo} title={title} />
+        <VignettePhoto src={src} srcset={srcset} title={title} />
       </div>
     </>
   );
@@ -45,7 +45,8 @@ Vignette.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  srcset: PropTypes.string.isRequired,
   style: PropTypes.string.isRequired,
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Photo from '../assets/img/gabriel.png';
+import PhotoPng from '../assets/img/gabriel.png';
+import PhotoWebp from '../assets/img/gabriel.webp';
 import Background from '../assets/img/gabriel_background.svg';
 
 const useStyles = makeStyles({
@@ -32,7 +33,11 @@ const PhotoPresentation = () => {
   return (
     <div className={classes.container}>
       <img src={Background} className={classes.svg} alt="background svg" />
-      <img src={Photo} className={classes.photo} alt="gabriel tresch" />
+      {/* <img src={Photo} className={classes.photo} alt="gabriel tresch" /> */}
+      <picture>
+        <source type="image/webp" srcSet={PhotoWebp} className={classes.photo} />
+        <img src={PhotoPng} alt="Gabriel Tresch" className={classes.photo} />
+      </picture>
     </div>
   );
 };

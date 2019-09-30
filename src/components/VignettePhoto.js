@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import MemphisFond from '../assets/img/memphis-fond.png';
-import Image from './Image';
+// import Image from './Image';
 
 const useStyles = makeStyles({
   vignette: {
@@ -48,6 +48,9 @@ const useStyles = makeStyles({
     },
   },
 });
+
+const baseUrl = require.context('../assets/img', true);
+
 const VignettePhoto = ({
   src, srcset, title,
 }) => {
@@ -56,7 +59,11 @@ const VignettePhoto = ({
     <div className={classes.vignette}>
       <div className={classes.background} />
       <div className={classes.content}>
-        <Image src={src} srcset={srcset} alt={title} />
+        <picture>
+          <source type="image/webp" srcSet={baseUrl(`./${srcset}`)} className={classes.img} />
+          <img src={baseUrl(`./${src}`)} alt={title} className={classes.img} />
+        </picture>
+        {/* <Image src={src} srcset={srcset} alt={title} classe="imgVignetteHome" /> */}
       </div>
     </div>
   );

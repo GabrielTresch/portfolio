@@ -114,7 +114,6 @@ const Photo = () => {
         <ModalImage
           small={value.img}
           large={value.img}
-          // alt={value.alt}
           className={classes.img}
         />
       ))}

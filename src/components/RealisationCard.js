@@ -32,7 +32,6 @@ const useStyles = makeStyles({
     margin: 'auto 5px',
   },
   odd: {
-    // transform: 'translateY(50%)',
     marginTop: '200px',
   },
   '@media (max-width: 660px)': {

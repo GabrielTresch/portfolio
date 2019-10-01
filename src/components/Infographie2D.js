@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import ModalImage from 'react-modal-image';
 import SpaceImg from '../assets/img/space_infographie.svg';
 import BeeImg from '../assets/img/bee_golden_ratio.svg';
 import KoiImg from '../assets/img/koi_golden_ratio.svg';
@@ -9,6 +10,7 @@ import OrqueImg from '../assets/img/orque_golden_ratio.svg';
 
 const useStyles = makeStyles({
   container: {
+    minHeight: 'calc(100vh - 350px)',
     maxWidth: '1200px',
     columns: '3 250px',
     columnGap: '1rem',
@@ -28,16 +30,45 @@ const useStyles = makeStyles({
   },
 });
 
+const images = [
+  {
+    id: 1,
+    img: `${SpaceImg}`,
+  },
+  {
+    id: 2,
+    img: `${BeeImg}`,
+  },
+  {
+    id: 3,
+    img: `${KoiImg}`,
+  },
+  {
+    id: 4,
+    img: `${SwanImg}`,
+  },
+  {
+    id: 5,
+    img: `${ButterflyImg}`,
+  },
+  {
+    id: 6,
+    img: `${OrqueImg}`,
+  },
+];
+
 const Infographie2D = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <img src={SpaceImg} alt="" className={classes.img} />
-      <img src={BeeImg} alt="" className={classes.img} />
-      <img src={KoiImg} alt="" className={classes.img} />
-      <img src={SwanImg} alt="" className={classes.img} />
-      <img src={ButterflyImg} alt="" className={classes.img} />
-      <img src={OrqueImg} alt="" className={classes.img} />
+      {images.map((value) => (
+        <ModalImage
+          small={value.img}
+          large={value.img}
+          // alt={value.alt}
+          className={classes.img}
+        />
+      ))}
     </div>
   );
 };

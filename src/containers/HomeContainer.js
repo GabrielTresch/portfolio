@@ -103,7 +103,7 @@ const HomeContainer = () => {
       <div className={classes.header}>
         <div className={classes.title}>
           <h1 className={classes.h1}>GABRIEL TRESCH</h1>
-          <p className={classes.p}>Développeur web</p>
+          <p className={classes.p}>Développeur web freelance</p>
         </div>
         <img className={classes.svgImg} src={iconG} alt="icon g" />
         <LinkIcons />

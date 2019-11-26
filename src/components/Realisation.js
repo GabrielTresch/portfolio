@@ -44,7 +44,6 @@ const Realisation = () => {
           competences={value.competences}
           link={value.project_url}
           img={value.images}
-          odd={value.id % 2 === 0}
         />
         // </div>
       ))}

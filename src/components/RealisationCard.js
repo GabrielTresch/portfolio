@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   container: {
     width: '300px',
-    maxHeight: '363px',
+    maxHeight: '400px',
     margin: '20px auto 0 auto',
     textDecoration: 'none',
     color: 'black',
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     margin: 'auto 5px',
   },
   odd: {
-    marginTop: '200px',
+    marginTop: '50px',
   },
   '@media (max-width: 660px)': {
     container: {
